@@ -4,32 +4,20 @@ import { actors } from "../data";
 function Actors() {
   return (
     <div>
-      <div>
       <h1>Actors Page</h1>
-      </div>
-
-      <div>
         <div>
           {actors.map((actor, index) => (
-            <div>
-              <div>
+            <div key={index}>
               <h2>{actor.name}</h2>
-              </div>
-          
-          
-              <div>
+              <ul>
                 {actor.movies.map((movie, index) => (
-                  <ul>
-                    <li>{movie}</li>
-                  </ul>
+                    <li key={index}>{movie}</li>
                 ))}
-              </div>  
+              </ul>
             </div>
           ))}
         </div>
-      </div>
     </div>
   )}
-
 
 export default Actors;

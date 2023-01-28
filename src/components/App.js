@@ -10,10 +10,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      
-        <Route path="/">
-          <Home />
-        </Route>
+        <Switch>
+        
 
         <Route path="/movies">
           <Movies />
@@ -26,7 +24,11 @@ function App() {
         <Route path="/actors">
           <Actors />
         </Route>
-      
+
+        <Route path="/">
+          <Home />
+        </Route>
+        </Switch>
     </div>
   )
 }
